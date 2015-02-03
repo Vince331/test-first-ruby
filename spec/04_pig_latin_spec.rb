@@ -69,6 +69,23 @@ describe "#translate" do
     s.should == "ethay ickquay ownbray oxfay"
   end
 
+=begin
+it "capitalizes any words that have a capital in it" do
+    s = translate("Bill Clinton was president")
+    s.should == "Illbay Intonclay asway esidentpray"
+  end
+
+=end
+
+it "retains the punctuation from the original phrase" do
+    s = translate("can't")
+    s.should == "an'tcay"
+  end
+
+
+
+
+
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase

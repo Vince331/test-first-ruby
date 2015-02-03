@@ -23,6 +23,13 @@ describe "some silly block functions" do
       end
       result.should == "olleh yllod"
     end
+
+    it "reverses each word in the string returned by the default block" do
+      result = reverser do
+      end
+      result.should == ""
+    end
+
   end
 
   describe "adder" do
