@@ -37,18 +37,24 @@ end
  class Celsius < Temperature
 
  	def initialize(temp)
- 		@temperature = temp
-		
-
+ 		@temperature = { :c => temp}
  	end
-
- 	def in_celsius
- 		return @temperature
- 	end
-
- 	
 
  end
+
+ class Fahrenheit < Temperature
+
+ 	def initialize(temp)
+ 		@temperature = { :f => temp}
+ 	end
+
+ end
+
+
+ 
+ 	
+
+
 
 
 
@@ -56,5 +62,5 @@ p t = Temperature.new(f: 50)
 p t.in_fahrenheit
 p t.in_celsius
 
-h = Celsius.new 50
-p h.in_celsius
+# h = Celsius.new 50
+# p h.in_celsius
